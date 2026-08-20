@@ -1,0 +1,68 @@
+#+TITLE: homebrew-lexicards
+#+AUTHOR: Andrey Pudov
+#+DATE: <2026-08-05 Wed>
+#+OPTIONS: toc:nil
+
+* LexiCards Homebrew Tap
+
+This repository provides a Homebrew tap for installing [[https://github.com/andreypudov/lexicards][LexiCards]], macOS vocabulary card app.
+
+* Installation
+
+Add the tap:
+
+#+begin_src sh
+brew tap andreypudov/lexicards
+#+end_src
+
+Trust the tap (required by newer Homebrew versions):
+
+#+begin_src sh
+brew trust andreypudov/lexicards
+#+end_src
+
+Install LexiCards:
+
+#+begin_src sh
+brew install --cask lexicards
+#+end_src
+
+Install a specific version:
+
+#+begin_src sh
+brew install --cask lexicards@1.1
+#+end_src
+
+* Gatekeeper
+
+LexiCards is distributed unsigned and unnotarized. macOS may block the first launch.
+You can allow it in:
+
+- System Settings → Privacy & Security → *Allow Anyway*
+
+Alternatively, you may remove the quarantine attribute manually:
+
+#+begin_src sh
+xattr -dr com.apple.quarantine /Applications/LexiCards.app
+#+end_src
+
+* Updating
+
+To update LexiCards through Homebrew:
+
+#+begin_src sh
+brew update
+brew upgrade --cask lexicards
+#+end_src
+
+* Development
+
+The cask file is located in =Casks/lexicards.rb=. It follows standard Homebrew
+Cask conventions and references the latest LexiCards release from GitHub.
+
+Versioned casks are in =Casks/lexicards@*.rb= and must use matching cask tokens
+(for example, =lexicards@1.1.rb= must declare =cask "lexicards@1.1" do=).
+
+* License
+
+This tap follows the same license as LexiCards (Apache 2.0).
