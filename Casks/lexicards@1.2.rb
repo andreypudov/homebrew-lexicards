@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-cask "lexicards" do
+cask "lexicards@1.2" do
   version "1.2"
   sha256 "d9acdc2e0218fd1dba109ac32be7c5d022ac75216636f662dff9023d1a060507"
 
