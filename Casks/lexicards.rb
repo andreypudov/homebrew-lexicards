@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 cask "lexicards" do
-  version "1.5"
-  sha256 "99d2ead17d9aa159bb8b75518680c6935882a08a6b035bb058044277680ee11c"
+  version "1.6"
+  sha256 "d6d1c212de369ce5f0d3e3026cfc40cec8b2a59d95e4f444df92cf9b1ca170bf"
 
   url "https://github.com/andreypudov/lexicards/releases/download/v#{version}/LexiCards-#{version}.zip"
   name "LexiCards"
